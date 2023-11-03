@@ -330,9 +330,10 @@ const CustomChart = () => {
         criIncrease = 1;
       }
 
+      let trueSkillLevel = Math.min(Math.max(skillLevel, 1), 10);
       //뎀감을 적용한 캐릭터 스킬 데미지
-      let lowDmg = atk * criIncrease * (1 - reduction) * (character.admissionSkill.percentage[0][skillLevel-1] / 100);
-      let highDmg = atk * criIncrease * (1 - reduction) * (character.graduateSkill.percentage[0][skillLevel-1] / 100);
+      let lowDmg = atk * criIncrease * (1 - reduction) * (character.admissionSkill.percentage[0][trueSkillLevel-1] / 100);
+      let highDmg = atk * criIncrease * (1 - reduction) * (character.graduateSkill.percentage[0][trueSkillLevel-1] / 100);
       lowSkillDamage.push(lowDmg);
       highSkillDamage.push(highDmg);
 
@@ -522,11 +523,15 @@ const CustomChart = () => {
     if(isNaN(value)) {
       return;
     }
-    value = Math.min(value, 10);
-    value = Math.max(value, 1);
-
     setSkillLevel(value);
   }
+
+  function skillLevelOnBlur() {
+    if(skillLevel > 10 || skillLevel < 1) {
+      setSkillLevel(Math.min(Math.max(skillLevel, 1), 10));
+    }
+  }
+  
 
   return (
     <div className={styles.customChart}>
@@ -543,7 +548,7 @@ const CustomChart = () => {
         </CriSettingDiv>
         <SkillLevelDiv>
           <SkillLevelSpan>스킬 레벨 : </SkillLevelSpan>
-          <SkillLevelInput type='text' value={skillLevel} onChange={handleSkillLevel} name='skillLevel' />
+          <SkillLevelInput type='text' value={skillLevel} onChange={handleSkillLevel} name='skillLevel' onBlur={skillLevelOnBlur} />
         </SkillLevelDiv>
         <div className={styles.customChart_bottom_viewport}>
           <div style={{
