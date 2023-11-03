@@ -348,15 +348,15 @@ const CustomChart = () => {
    * 각각의 경로는 labels와 1대 1로 대응합니다.
    */
   for (let i = 0; i < labels.length; i++) {
-    let srcString;
+    let image = new Image();
 
     if (selectedDB[i].name[0] === '시온 더 다크불릿') {
-      srcString = '/images/graduateSkill/Icon_GraduateSkill_' + 'xXionx' + '.png'
+      image.src = '/images/graduateSkill/Icon_GraduateSkill_' + 'xXionx' + '.png';
     } else {
-      srcString = '/images/graduateSkill/Icon_GraduateSkill_' + selectedDB[i].name[1] + '.png';
+      image.src = '/images/graduateSkill/Icon_GraduateSkill_' + selectedDB[i].name[1] + '.png';
     }
 
-    labelImages.push(srcString);
+    labelImages.push(image);
   }
 
   /*
@@ -407,11 +407,9 @@ const CustomChart = () => {
       let imageSize = x.getPixelForValue(1) - x.getPixelForValue(0);
       imageSize = Math.min(imageSize, 100);
 
-      data.datasets[0].images.forEach((imageSrc, index) => {
-        const logo = new Image();
-        logo.src = imageSrc;
+      data.datasets[0].images.forEach((image, index) => {
         ctx.drawImage(
-          logo,
+          image,
           x.getPixelForValue(index) - imageSize / 2, y.getPixelForValue(0) - 1,
           imageSize, imageSize
         );
