@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Katuri';
+  font-style: 'normal';
+  font-weight: 100;
+  src: url('./Katuri.ttf');
+}
+
+@font-face {
+  font-family: 'OneMobilePop';
+  font-style: 'normal';
+  font-weight: 100;
+  src: url('ONEMobilePOP.ttf');
+}

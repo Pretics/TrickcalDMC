@@ -1,0 +1,64 @@
+.chartSection,
+.imageBoxSection,
+.settingSection {
+  width: 80vw;
+  min-width: 620px;
+  max-width: 1280px;
+}
+
+.chartSection {
+  margin-bottom: 80px;
+}
+.imageBoxSection {
+  margin-bottom: 80px;
+}
+
+.chartWindow,
+.imageBoxWindow,
+.settingWindow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageBoxWindow {
+  height: 300px;
+}
+
+.chartWindow_top,
+.imageBoxWindow_top,
+.settingWindow_top {
+  flex: none;
+  height: var(--window-titlebar-height);
+  display: flex;
+  align-items: center;
+  background-color: #363944;
+}
+
+.imageBoxWindow_top_title,
+.chartWindow_top_title,
+.settingWindow_top_title {
+  margin-left: 20px;
+  font-family: 'OneMobilePop';
+  font-size: var(--window-title-fontsize);
+  font-weight: 100;
+  text-align: left;
+}
+
+.chartWindow_bottom,
+.imageBoxWindow_bottom,
+.settingWindow_bottom {
+  height: 100%;
+  background-color: #FEFEFE;
+}
+.chartWindow_bottom {
+  box-sizing: border-box;
+  border-top: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+.imageBoxWindow_bottom {
+  overflow-y: auto;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+}

@@ -1,0 +1,53 @@
+.customChart {
+  display:flex;
+  flex-direction: column;
+  flex: none;
+}
+
+.customChart_top {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customChart_top_title {
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'OneMobilePop';
+  font-weight: 100;
+}
+
+.zoomInButton,
+.zoomOutButton,
+.zoomScale {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 10%;
+  font-size: 20px;
+}
+
+.customChart_bottom {
+  position: relative;
+}
+.customChart_bottom_viewport {
+  overflow-x: scroll;
+}
+
+.zoomInButton {
+  bottom: 120px;
+}
+
+.zoomScale {
+  bottom: 80px;
+}
+
+.zoomOutButton {
+  bottom: 40px;
+}

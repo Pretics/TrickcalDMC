@@ -1,0 +1,94 @@
+.header {
+  width: 100%;
+  height: auto;
+  background-color: #363944;
+  display: flex;
+  flex-direction: column;
+  min-width: 768px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 768px;
+
+  background: linear-gradient(
+    to Bottom, transparent,
+    #AAAAAA55,
+    #F5F5F5 30%
+  ), url(/images/background/start.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.section_Container {
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  height: 200px;
+  color: black;
+}
+
+.header_top {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.header_bottom {
+  background-color: #292B33;
+  height: 50px;
+  font-family: 'Katuri';
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.header_title {
+  font-family: 'OneMobilePop';
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.header_logoContainer {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header_logoImage {
+  width: 100px;
+  height: auto;
+}
+
+.header_bottom ul {
+  list-style: none;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.header_bottom li {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+}
+.header_bottom li:hover {
+  background-color: black;
+}
+
+.header_bottom li a {
+  text-decoration: none;
+  color: white;
+}
