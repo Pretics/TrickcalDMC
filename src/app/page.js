@@ -27,7 +27,7 @@ const BackgroundImageDiv = styled.div`
   height: 1500px;
   background: linear-gradient(
     to bottom, #00000000 0%, #F5F5F5 28%
-  ), url('/images/background/start.png');
+  ), url('/images/background/Start.png');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -100;
