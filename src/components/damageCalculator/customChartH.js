@@ -351,9 +351,9 @@ const CustomChart = () => {
     let image = new Image();
 
     if (selectedDB[i].name[0] === '시온 더 다크불릿') {
-      image.src = '/images/graduateSkill/Icon_GraduateSkill_' + 'xXionx' + '.png';
+      image.src = `/images/graduateSkill/Icon_GraduateSKill_xXionx.png`;
     } else {
-      image.src = '/images/graduateSkill/Icon_GraduateSkill_' + selectedDB[i].name[1] + '.png';
+      image.src = `/images/graduateSkill/Icon_GraduateSKill_${selectedDB[i].name[1]}.png`;
     }
 
     labelImages.push(image);
